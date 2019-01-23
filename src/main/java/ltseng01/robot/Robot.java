@@ -31,9 +31,11 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void robotInit() {
+
         leftFront = new CANSparkMax(1, CANSparkMaxLowLevel.MotorType.kBrushless);
-        leftBack = new CANSparkMax(2, CANSparkMaxLowLevel.MotorType.kBrushless);
-        rightFront = new CANSparkMax(3, CANSparkMaxLowLevel.MotorType.kBrushless);
+        rightFront = new CANSparkMax(2, CANSparkMaxLowLevel.MotorType.kBrushless);
+
+        leftBack = new CANSparkMax( 3, CANSparkMaxLowLevel.MotorType.kBrushless);
         rightBack = new CANSparkMax(4, CANSparkMaxLowLevel.MotorType.kBrushless);
 
         leftSCG = new SpeedControllerGroup(leftFront, leftBack);
